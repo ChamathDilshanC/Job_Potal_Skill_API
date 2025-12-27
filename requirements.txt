@@ -1,0 +1,8 @@
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pydantic>=2.10.0
+python-multipart>=0.0.12
+python-dotenv>=1.0.0
+
+# Optional: For local testing only (not needed for Vercel deployment)
+# requests>=2.31.0
