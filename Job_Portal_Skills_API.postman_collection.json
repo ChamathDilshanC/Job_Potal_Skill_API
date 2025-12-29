@@ -232,6 +232,254 @@
       ]
     },
     {
+      "name": "Degrees",
+      "item": [
+        {
+          "name": "Get All Degrees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees?limit=100",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Maximum number of degrees to return (1-500, default: 100)"
+                }
+              ]
+            },
+            "description": "Get all available academic degrees and certifications (400+ degrees). Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Search Degrees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/search?q=computer&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "computer",
+                  "description": "Search query (minimum 1 character)"
+                },
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "description": "Maximum number of results (1-50, default: 10)"
+                }
+              ]
+            },
+            "description": "Search for degrees based on a query string. Examples: 'computer', 'master', 'engineering', 'mba'. Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Search Degrees - Master",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/search?q=master&limit=15",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "master",
+                  "description": "Search for master's degrees"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "description": "Maximum number of results"
+                }
+              ]
+            },
+            "description": "Example: Search for all master's degrees."
+          },
+          "response": []
+        },
+        {
+          "name": "Search Degrees - Engineering",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/search?q=engineering&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "engineering",
+                  "description": "Search for engineering degrees"
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Maximum number of results"
+                }
+              ]
+            },
+            "description": "Example: Search for all engineering degrees."
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Degree Categories",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories"]
+            },
+            "description": "Get all degree categories (Undergraduate, Graduate, Doctoral, Diplomas, Professional). Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Undergraduate Degrees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories/undergraduate",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories", "undergraduate"]
+            },
+            "description": "Get all undergraduate (Bachelor's) degrees. Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Graduate Degrees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories/graduate",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories", "graduate"]
+            },
+            "description": "Get all graduate (Master's) degrees. Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Doctoral Degrees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories/doctoral",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories", "doctoral"]
+            },
+            "description": "Get all doctoral degrees (PhD, MD, DBA, etc.). Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Diplomas",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories/diplomas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories", "diplomas"]
+            },
+            "description": "Get all diploma and certificate programs. Requires API key authentication."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Professional Certifications",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-API-Key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/degrees/categories/professional",
+              "host": ["{{base_url}}"],
+              "path": ["api", "degrees", "categories", "professional"]
+            },
+            "description": "Get all professional certifications (CA, CPA, PMP, CFA, CISSP, AWS, etc.). Requires API key authentication."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "name": "Documentation",
       "item": [
         {
